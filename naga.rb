@@ -6,8 +6,8 @@ class Naga < Formula
   sha1 "9ba4aaf827521222b4b43fb736614c4c7b7bfc8e"
 
   def install
-      system "mkdir #{bin} -p"
-      system "make", "install", "INSTALL_PATH=#{bin}/naga"
+    bin.mkpath()
+    system "make", "install", "INSTALL_PATH=#{bin}/naga"
   end
 
 end
